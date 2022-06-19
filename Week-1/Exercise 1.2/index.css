@@ -64,6 +64,7 @@ main{
     margin: 1em;
 }
 
+
 .music-control{
     width: 60%;
     display: flex;
@@ -78,6 +79,7 @@ nav a{
     color: black;
     font-weight: bold;
 }
+
 
 .footer{
     height: 15vh;

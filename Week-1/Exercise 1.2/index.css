@@ -6,6 +6,7 @@
 body{
     margin: 0;
     padding: 0;
+    counter-reset: list;
 }
 
 main{
@@ -36,15 +37,44 @@ main{
     height: 85%;
 }
 
-.card{
-    display: flex;
-    
-}
-.album-cover{
+.album-cover>.card{
     background-color: #454545;
     min-height: 30%;
 }
+.card{
+    display: flex;
+   
+    
+}
+.playlist{
+    margin-top: 1rem;
+    margin-left: 1em;
+}
+.li:nth-child(even){
+    background: #F0F0F0;
+}
+.li::before{
+    counter-increment: list;
+    content: counter(list) "\00a0 ";
+}
 
+button>a:visited{
+    color: blue;
+}
+
+button>a{
+    text-decoration: none;
+}
+
+.li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.ld{
+    width: 100%;
+    display: flex;
+}
 .card-image{
     margin-left: 2rem;
 }

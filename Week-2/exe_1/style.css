@@ -1,0 +1,17 @@
+:root{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+main{
+    width: 80%;
+    margin:auto;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.p-3{
+    padding: 3rem;
+}

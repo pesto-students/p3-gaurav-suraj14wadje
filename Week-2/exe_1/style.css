@@ -6,6 +6,27 @@ main{
     width: 80%;
     margin:auto;
 }
+.row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.col-6{
+    width: 50%;
+}
+
+@media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+}
 
 .center{
     display: flex;

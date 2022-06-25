@@ -6,6 +6,9 @@ main{
     width: 80%;
     margin:auto;
 }
+.grey{
+    color: grey;
+}
 .row{
     display: flex;
     width: 100%;
@@ -20,11 +23,19 @@ main{
 .col-6{
     width: 50%;
 }
-
-@media only screen and (max-width: 690px) {
+.heading{
+    width: 50%;
+}
+@media only screen and (max-width: 790px) {
     /* For mobile phones: */
     [class*="col-"] {
       width: 100%;
+
+    }
+
+    .heading{
+        width: 100%;
+        margin:auto;
     }
 }
 
@@ -35,4 +46,18 @@ main{
 
 .p-3{
     padding: 3rem;
+}
+.p-2{
+    padding: 2rem;
+}
+
+.image{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form > div{
+    padding: .8rem;
 }

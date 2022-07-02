@@ -8,7 +8,7 @@ function memoize(func){
     function wrapper(...params){
         let key = params.toString();
 
-        if(cache[key]) return cache[key];
+        if(cache[key] !== undefined) return cache[key];
 
         cache[key] = func(...params);
         return cache[key];

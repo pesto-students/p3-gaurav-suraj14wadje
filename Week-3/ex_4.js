@@ -11,9 +11,12 @@ function createStack() {
   };
 }
 const stack = createStack();
+
 stack.push(10);
 stack.push(5);
+
 stack.items = [1,2,4]
+
 console.log(stack.pop()); 
 console.log(stack.pop()); 
 

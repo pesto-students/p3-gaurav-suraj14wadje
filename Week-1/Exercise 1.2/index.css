@@ -1,0 +1,124 @@
+:root{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+ 
+body{
+    margin: 0;
+    padding: 0;
+    counter-reset: list;
+}
+
+main{
+    margin-left: 3rem;
+}
+
+.np{
+    padding: 0;
+}
+
+.nm{
+    margin: 0;
+}
+
+.navbar{
+    width: 3rem;
+    height: 100vh;
+    position: fixed;
+    background-color: #F0F0F0;
+}
+
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 85%;
+}
+
+.album-cover>.card{
+    background-color: #454545;
+    min-height: 30%;
+}
+.card{
+    display: flex;
+   
+    
+}
+.playlist{
+    margin-top: 1rem;
+    margin-left: 1em;
+}
+.li:nth-child(even){
+    background: #F0F0F0;
+}
+.li::before{
+    counter-increment: list;
+    content: counter(list) "\00a0 ";
+}
+
+button>a:visited{
+    color: blue;
+}
+
+button>a{
+    text-decoration: none;
+}
+
+.li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.ld{
+    width: 100%;
+    display: flex;
+}
+.card-image{
+    margin-left: 2rem;
+}
+
+.card-image img{
+    padding: 2rem;
+}
+.card-details{
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-between;
+}
+
+.card-details span{
+    margin: 1em;
+}
+
+
+.music-control{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.music-control a {
+    color: white;
+}
+
+nav a{
+    color: black;
+    font-weight: bold;
+}
+
+
+.footer{
+    height: 15vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #43689B;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

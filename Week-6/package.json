@@ -1,0 +1,14 @@
+{
+  "name": "week-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex_1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
+}

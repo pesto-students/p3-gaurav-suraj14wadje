@@ -1,11 +1,9 @@
-const {largestSum,testCases : largestSumTestCases } = require('./ex_1');
-
-
 
 test("largest sum :",()=>{
-    const inputs = largestSumTestCases.input;
-    const outputs = largestSumTestCases.output;
+    const {largestSum,testCases  } = require('./ex_1');
 
+    const inputs = testCases.input;
+    const outputs = testCases.output;
     for(let i = 0;i< inputs.length;i++){
         const input = inputs[i];
         const output = outputs[i];
@@ -13,6 +11,23 @@ test("largest sum :",()=>{
         const result = largestSum(input);
 
         expect(result).toBe(output);
+    }
+})
+
+test.only("Spiral Order Matrix :",()=>{
+    const { getSpirally,testCases } = require('./ex_2');
+    const inputs = testCases.input;
+    const outputs = testCases.output;
+    for(let i = 0;i< inputs.length;i++){
+        const input = inputs[i];
+        const output = outputs[i];
+
+        const result = getSpirally(input);
+        console.log(input)
+        console.log(result)
+        expect(result.length).toBe(output.length)
+        for(let i = 0;i<output.length;i++)
+            expect(result[i]).toBe(output[i]);
     }
 })
 

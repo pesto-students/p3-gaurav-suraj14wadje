@@ -14,7 +14,7 @@ test("largest sum :",()=>{
     }
 })
 
-test.only("Spiral Order Matrix :",()=>{
+test("Spiral Order Matrix :",()=>{
     const { getSpirally,testCases } = require('./ex_2');
     const inputs = testCases.input;
     const outputs = testCases.output;

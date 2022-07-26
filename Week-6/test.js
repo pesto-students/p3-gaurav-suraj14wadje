@@ -69,3 +69,16 @@ test("Problem 6.5: Pair With Given Difference",()=>{
         expect(output).toBe(result)
     }
 })
+
+test("Problem 6.6 : 3 sum",()=>{
+    const {closestSum,testCases} = require('./ex_6');
+
+    for(let i =0;i<testCases.input.length;i++){
+        const input = testCases.input[i];
+        const output = testCases.output[i];
+
+        const result = closestSum(...input);
+
+        expect(result).toBe(output)
+    }
+})

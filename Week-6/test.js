@@ -42,3 +42,16 @@ test("sort 1's and zeros",()=>{
         expect(result.toString()).toBe(output.toString());
     }
 })
+
+test.only("Problem 6.4 : Best time to buy and sell stock",()=>{
+    const {maxProfit, testCases} = require("./ex_4");
+
+    for(let i =0;i<testCases.input.length;i++){
+        const input = testCases.input[i];
+        const output = testCases.output[i];
+
+        const result = maxProfit(input);
+
+        expect(output).toBe(result)
+    }
+})

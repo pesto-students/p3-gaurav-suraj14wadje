@@ -43,7 +43,7 @@ test("sort 1's and zeros",()=>{
     }
 })
 
-test.only("Problem 6.4 : Best time to buy and sell stock",()=>{
+test("Problem 6.4 : Best time to buy and sell stock",()=>{
     const {maxProfit, testCases} = require("./ex_4");
 
     for(let i =0;i<testCases.input.length;i++){
@@ -51,6 +51,20 @@ test.only("Problem 6.4 : Best time to buy and sell stock",()=>{
         const output = testCases.output[i];
 
         const result = maxProfit(input);
+
+        expect(output).toBe(result)
+    }
+})
+
+
+test("Problem 6.5: Pair With Given Difference",()=>{
+    const {doPairExist,testCases} = require('./ex_5');
+
+    for(let i =0;i<testCases.input.length;i++){
+        const input = testCases.input[i];
+        const output = testCases.output[i];
+
+        const result = doPairExist(...input);
 
         expect(output).toBe(result)
     }

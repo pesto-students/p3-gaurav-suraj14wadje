@@ -26,6 +26,8 @@ class LinkedList{
             this.tail = newNode;
         }
 
+        return newNode;
+
     }
 
     log(){

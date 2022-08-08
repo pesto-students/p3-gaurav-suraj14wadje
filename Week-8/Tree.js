@@ -31,8 +31,8 @@ class Tree{
 
     inOrder(root){
         if(root !== null){
-            console.log(root.data);
             this.inOrder(root.left);
+            console.log(root.data);
             this.inOrder(root.right);
         }
     }

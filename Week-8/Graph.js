@@ -2,7 +2,7 @@ const Queue = require("./Queue");
 
 class Graph{
 
-    constructor(vertices,edges){
+    constructor(vertices,edges,isDirected){
         this.vertices = vertices;
         this.adjacencyList = Array(vertices).fill(null).map(a=>[])
         
@@ -10,7 +10,8 @@ class Graph{
         edges.forEach(edge=>{
             const [source,destination] = edge;
             this.adjacencyList[source].push(destination);
-            this.adjacencyList[destination].push(source)
+            if(!isDirected)
+                this.adjacencyList[destination].push(source)
         })
     }
 

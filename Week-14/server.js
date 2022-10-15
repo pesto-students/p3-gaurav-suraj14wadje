@@ -6,6 +6,5 @@ const router = require("./router");
 const server = express();
 
 server.use(express.json());
-server.use(router);
-server.use("/", (_req, res) => res.send("healthy..."));
+server.use("/api", router);
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));

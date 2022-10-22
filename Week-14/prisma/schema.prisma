@@ -1,0 +1,60 @@
+generator client {
+  provider        = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URI")
+}
+
+model User{
+    id        Int       @id @default(autoincrement())
+    name      String        @db.VarChar(100)
+    email     String    @unique @db.VarChar(100)
+    password  String?   @db.VarChar(200)
+    assets    Asset[]
+    cashFlows CashFlow[]
+}
+
+model Asset{
+  id    Int   @id @default(autoincrement())
+  name  String
+  value Int
+  unit CurrencyUnit?
+  annualGrowthRate Float?
+  type AssetType
+  userId Int
+  user User @relation(fields: [userId],references: [id])
+  file String?
+}
+
+model CashFlow{
+  id    Int   @id @default(autoincrement())
+  name String
+  amount Float
+  type CashFlowType
+  year Int
+  userId Int
+  user User @relation(fields: [userId],references: [id])
+  month Int
+}
+
+enum CashFlowType{
+  Income
+  Expense
+  Saving
+}
+
+enum CurrencyUnit{
+
+  Thousand
+  Lakh
+  Crore
+}
+enum AssetType{
+  Property
+  Buisness
+  equity
+  Income
+  Other
+}

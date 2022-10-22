@@ -25,6 +25,7 @@ model Asset{
   type AssetType
   userId Int
   user User @relation(fields: [userId],references: [id])
+  file String?
 }
 
 model CashFlow{

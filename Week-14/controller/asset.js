@@ -1,4 +1,5 @@
 const prisma = require("../prisma/prisma");
+const multer = require("multer");
 
 const assetController = require("express").Router();
 
@@ -13,20 +14,22 @@ assetController.get("/", async (req, res) => {
   res.json(result);
 });
 
-assetController.post("/", async (req, res) => {
+const upload = multer({ dest: "uploads/" });
+
+assetController.post("/", upload.single("document"), async (req, res) => {
   const { name, type, annualGrowthRate, value, unit } = req.body;
   const { user } = req;
 
   //todo add validations
-
   const asset = await prisma.asset.create({
     data: {
       name,
       type,
-      annualGrowthRate,
-      value,
+      annualGrowthRate: Number(annualGrowthRate),
+      value: Number(value),
       unit,
       userId: user.id,
+      file: req.file.filename,
     },
   });
 

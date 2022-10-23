@@ -5,6 +5,8 @@ import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import ReactGa from "react-ga";
+ReactGa.initialize("G-6E41LV61BY", {});
 
 Sentry.init({
   dsn:

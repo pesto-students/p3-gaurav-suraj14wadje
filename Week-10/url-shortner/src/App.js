@@ -4,6 +4,7 @@ import "./App.css";
 import { Button, TextField } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import { DataGrid } from "@mui/x-data-grid";
+import ReactGa from "react-ga";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -11,6 +12,7 @@ function App() {
   const [shortUrls, setShortUrls] = useState([]);
 
   useEffect(() => {
+    ReactGa.pageview(window.location.pathname);
     const data = localStorage.getItem("data");
     if (!data) return;
     const columns = JSON.parse(localStorage.getItem("data"));
